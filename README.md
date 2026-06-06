@@ -3,12 +3,8 @@
 一个给 Windows 版 Codex 用的修复 skill。它主要解决：Codex 更新、重启、重装之后，突然显示 **Computer Use 插件不可用**，或者本地插件图标损坏、插件列表消失。
 
 ## 一句话介绍
-
-```text
-去 GitHub 找 Codex Computer Use Fix，让 Codex 安装里面的 computer-use-fix skill，然后说：使用 computer-use-fix 修复 Computer Use。
-```
-
-更稳的说法是：把这个仓库地址发给 Codex，让它安装 `skills/computer-use-fix` 目录下的 skill，然后运行修复。
+使用方法：
+把这个仓库地址发给 Codex，让它安装 `skills/computer-use-fix` 目录下的 skill，然后运行修复。
 
 这个项目把一次已经验证过的修复流程整理成 skill。它主要处理的问题是：Codex 会把临时插件缓存 `.codex\.tmp\bundled-marketplaces\openai-bundled` 重建成不完整状态，导致 Computer Use 或其他 bundled 插件看起来像“丢了”。修复方式是把官方安装包里的 bundled 插件复制到一个稳定目录，再让 Codex 以后读这个稳定目录。
 
@@ -20,7 +16,7 @@
 - 插件页面图标坏了，或者 `openai-bundled` 从插件列表里消失。
 - `.codex\.tmp\bundled-marketplaces\openai-bundled` 里面只剩 `chrome` 之类的不完整内容。
 
-## 推荐用法
+## 详细用法
 
 打开这个 GitHub 仓库后，把仓库地址发给 Codex，然后说：
 
@@ -66,7 +62,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\skills\computer-use-fix\sc
 ## 安全说明
 
 - 不会直接修改 `C:\Program Files\WindowsApps`。
-- 不会添加开机自启动。
 - 不包含个人路径、账号、密码或 token。
 - 会先备份 `config.toml` 再改配置。
 
