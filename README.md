@@ -2,6 +2,8 @@
 
 一个给 Windows 版 Codex 用的修复 skill。它主要解决：Codex 更新、重启、重装之后，突然显示 **Computer Use 插件不可用**，或者本地插件图标损坏、插件列表消失。
 
+![Codex 设置里显示 Computer Use 插件不可用](assets/computer-use-unavailable.svg)
+
 ## 一句话介绍
 使用方法：
 把这个仓库地址发给 Codex，让它安装 `skills/computer-use-fix` 目录下的 skill，然后运行修复。
