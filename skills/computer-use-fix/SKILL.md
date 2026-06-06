@@ -1,9 +1,9 @@
 ---
-name: codex-windows-computer-use-repair
+name: computer-use-fix
 description: Repair Codex Desktop on Windows when Computer Use or bundled local plugins become unavailable after restart or Store update. Use when Settings says "Computer Use plugin unavailable", plugin icons are broken, bundled plugins disappear, `openai-bundled` is missing from `codex plugin list`, or `.codex\.tmp\bundled-marketplaces\openai-bundled` keeps reverting to a partial cache.
 ---
 
-# Codex Windows Computer Use Repair
+# Computer Use Fix
 
 Use this skill on Windows only. The common failure pattern is:
 

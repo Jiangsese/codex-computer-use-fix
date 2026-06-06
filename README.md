@@ -1,14 +1,16 @@
-# Codex Windows Computer Use 修复 Skill
+# Codex Computer Use Fix
 
-如果你的 Windows 版 Codex 更新、重启、重装之后，突然显示 **Computer Use 插件不可用**，或者本地插件图标损坏、插件列表消失，可以让 Codex 下载这个 skill，然后让它按这个 skill 跑一遍修复。
+一个给 Windows 版 Codex 用的修复 skill。它主要解决：Codex 更新、重启、重装之后，突然显示 **Computer Use 插件不可用**，或者本地插件图标损坏、插件列表消失。
 
-一句话用法：
+## 一句话介绍
 
 ```text
-让你的 Codex 安装这个 skill，然后对它说：使用 codex-windows-computer-use-repair 修复 Windows 上的 Computer Use。
+去 GitHub 找 Codex Computer Use Fix，让 Codex 安装里面的 computer-use-fix skill，然后说：使用 computer-use-fix 修复 Computer Use。
 ```
 
-这个项目就是把一次已经验证过的修复流程整理成 skill。它主要处理的问题是：Codex 会把临时插件缓存 `.codex\.tmp\bundled-marketplaces\openai-bundled` 重建成不完整状态，导致 Computer Use 或其他 bundled 插件看起来像“丢了”。修复方式是把官方安装包里的 bundled 插件复制到一个稳定目录，再让 Codex 以后读这个稳定目录。
+更稳的说法是：把这个仓库地址发给 Codex，让它安装 `skills/computer-use-fix` 目录下的 skill，然后运行修复。
+
+这个项目把一次已经验证过的修复流程整理成 skill。它主要处理的问题是：Codex 会把临时插件缓存 `.codex\.tmp\bundled-marketplaces\openai-bundled` 重建成不完整状态，导致 Computer Use 或其他 bundled 插件看起来像“丢了”。修复方式是把官方安装包里的 bundled 插件复制到一个稳定目录，再让 Codex 以后读这个稳定目录。
 
 ## 适合什么情况
 
@@ -23,13 +25,13 @@
 打开这个 GitHub 仓库后，把仓库地址发给 Codex，然后说：
 
 ```text
-安装这个仓库里 skills/codex-windows-computer-use-repair 目录下的 skill。
+安装这个仓库里 skills/computer-use-fix 目录下的 skill。
 ```
 
 安装后重启 Codex，再说：
 
 ```text
-使用 codex-windows-computer-use-repair 修复 Windows 上的 Computer Use。
+使用 computer-use-fix 修复 Computer Use。
 ```
 
 如果你不想先安装，也可以让 Codex 直接打开这个仓库里的 `SKILL.md` 和修复脚本，让它照着做。
@@ -39,7 +41,7 @@
 Codex 会按 skill 运行这个脚本：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\skills\codex-windows-computer-use-repair\scripts\repair-codex-windows-computer-use.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\skills\computer-use-fix\scripts\repair-codex-windows-computer-use.ps1
 ```
 
 脚本会自动：
@@ -58,7 +60,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\skills\codex-windows-compu
 如果你想自己在 PowerShell 里运行：
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\skills\codex-windows-computer-use-repair\scripts\repair-codex-windows-computer-use.ps1 -Force
+powershell -NoProfile -ExecutionPolicy Bypass -File .\skills\computer-use-fix\scripts\repair-codex-windows-computer-use.ps1 -Force
 ```
 
 ## 安全说明

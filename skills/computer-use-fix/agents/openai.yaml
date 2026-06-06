@@ -1,0 +1,7 @@
+interface:
+  display_name: "Computer Use Fix"
+  short_description: "Fix Computer Use on Windows"
+  default_prompt: "Use $computer-use-fix to repair Computer Use on Windows."
+
+policy:
+  allow_implicit_invocation: true
