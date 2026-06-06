@@ -1,0 +1,7 @@
+interface:
+  display_name: "Windows Computer Use Repair"
+  short_description: "Fix Computer Use on Windows"
+  default_prompt: "Use $codex-windows-computer-use-repair to repair Computer Use on Windows."
+
+policy:
+  allow_implicit_invocation: true
